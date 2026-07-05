@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Transparencia" description="Transparencia total en tiempo real. Auditoría con agentes de IA, 90% de los fondos van al territorio.">
+    <section class="section bg-dark" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <span class="section-tag light">Transparencia Total</span>
+                <h1 style="color: white;">Tu donación <span class="highlight">en tiempo real</span></h1>
+                <p style="color: rgba(255,255,255,0.7);">Cada transacción es auditada por nuestros Agentes de IA y disponible en nuestro dashboard público.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 900px; margin: 0 auto; text-align: center;">
+                <div style="background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 40px 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 900; color: var(--color-secondary);">90%</div>
+                    <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7);">de los fondos van al territorio</div>
+                    <div style="margin-top: 12px; background: rgba(245,197,24,0.15); padding: 8px 16px; border-radius: 100px; display: inline-block; font-size: 0.8rem; color: var(--color-secondary);">✅ Meta cumplida</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 40px 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 900; color: var(--color-secondary);">1,247</div>
+                    <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7);">transacciones auditadas</div>
+                    <div style="margin-top: 12px; background: rgba(245,197,24,0.15); padding: 8px 16px; border-radius: 100px; display: inline-block; font-size: 0.8rem; color: var(--color-secondary);">🔄 Actualizado en tiempo real</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 40px 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 900; color: var(--color-secondary);">3,892</div>
+                    <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7);">beneficiarios directos</div>
+                    <div style="margin-top: 12px; background: rgba(245,197,24,0.15); padding: 8px 16px; border-radius: 100px; display: inline-block; font-size: 0.8rem; color: var(--color-secondary);">👥 Personas impactadas</div>
+                </div>
+            </div>
+
+            <div style="max-width: 700px; margin: 50px auto 0; background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 30px;">
+                <h3 style="color: white; text-align: center; margin-bottom: 20px;">🔐 ¿Cómo funciona nuestra transparencia?</h3>
+                <ul style="list-style: none; color: rgba(255,255,255,0.8); line-height: 2;">
+                    <li>🤖 <strong style="color: white;">Auditoría automatizada:</strong> Nuestros Agentes de IA auditan cada transacción en segundos.</li>
+                    <li>📊 <strong style="color: white;">Dashboard en vivo:</strong> Todos los datos son públicos y accesibles en cualquier momento.</li>
+                    <li>📋 <strong style="color: white;">Reportes trimestrales:</strong> Publicamos informes detallados de ejecución presupuestal.</li>
+                    <li>🔎 <strong style="color: white;">Auditorías externas:</strong> Cooperantes y donantes pueden solicitar revisiones independientes.</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/donaciones" class="btn btn-primary">🤝 Confía y dona ahora</a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

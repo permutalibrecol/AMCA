@@ -1,10 +1,13 @@
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  site: 'https://tusuario.github.io/amca-web-astro',
-  output: 'static',
-  compressHTML: true,
-  build: {
-    inlineStylesheets: 'auto'
+{
+  "name": "amca-web-astro",
+  "version": "1.0.0",
+  "description": "Sitio web de la Fundación AMCA",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
   }
-});
+}
