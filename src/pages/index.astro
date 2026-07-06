@@ -1,28 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
 ---
-
-<BaseLayout 
-    title="Inicio" 
-    description="Fundación AMCA: Transformación social real mediante bioeconomía industrial, educación y agentes de Inteligencia Artificial."
->
-    <!-- Componente Hero: Impacto visual inicial -->
-    <Hero />
-
-    <!-- Componente Features: Explicación de los pilares -->
-    <Features />
-
-    <!-- Sección de Llamada a la Acción (CTA) Final -->
-    <section class="cta-section" style="padding: 60px 20px; text-align: center; background-color: #1e3a5f; color: white;">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">¿Listo para transformar el futuro con nosotros?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Tu apoyo directo permite que el 90% de los recursos lleguen al territorio.</p>
-            <div style="display: flex; gap: 20px; justify-content: center;">
-                <a href="/donaciones" style="background: #007c70; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold;">Donar Ahora</a>
-                <a href="/contacto" style="background: transparent; border: 2px solid white; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold;">Contáctanos</a>
-            </div>
-        </div>
+<BaseLayout title="Inicio">
+    <section class="container" style="padding: 40px 0;">
+        <h1>Fundación AMCA</h1>
+        <p>Innovamos hoy, transformamos mañana.</p>
+        <a href="/AMCA/donaciones" class="btn" style="background:#007c70; color:white;">Donar Ahora</a>
     </section>
 </BaseLayout>
