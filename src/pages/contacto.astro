@@ -11,8 +11,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
             
-            <!-- Formulario (Usando Formspree es lo más fácil) -->
-            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" style="background: #f4f7f6; padding: 40px; border-radius: 20px;">
+            <!-- Formulario conectado a Formspree -->
+            <form action="https://formspree.io/f/meebdewe" method="POST" style="background: #f4f7f6; padding: 40px; border-radius: 20px;">
                 <div style="margin-bottom: 20px;">
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre Completo</label>
                     <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">Mensaje</label>
                     <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; padding: 12px; border: none; border-radius: 8px; background: #007c70; color: white; font-weight: bold;">Enviar Mensaje</button>
             </form>
 
             <!-- Info de contacto -->
