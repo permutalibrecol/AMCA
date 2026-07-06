@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://tusuario.github.io/amca-web-astro',
+  site: 'https://permutalibrecol.github.io/AMCA/',
+  base: '/AMCA/',
   output: 'static',
   compressHTML: true,
   build: {
