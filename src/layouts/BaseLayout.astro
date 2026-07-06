@@ -1,20 +1,20 @@
 ---
-import '../styles/global.css';
-const { title, description } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
 ---
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Fundación AMCA</title>
-    <meta name="description" content={description} />
 </head>
 <body>
-    <header style="padding: 20px; text-align: center;">
-        <img src="/images/logo-amca.jpg" alt="Logo AMCA" style="max-width: 200px;">
-    </header>
-    <slot />
-    <footer style="text-align: center; padding: 40px; background: var(--primary); color: white;">
-        <p>Juntos construimos independencia y un futuro mejor.</p>
-    </footer>
+    <Header />
+    <main>
+        <slot />
+    </main>
+    <Footer />
 </body>
 </html>
