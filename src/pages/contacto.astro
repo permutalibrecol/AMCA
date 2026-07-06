@@ -2,85 +2,39 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contacto" description="Contáctanos para ser aliado, donar o conocer más sobre nuestros programas.">
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Contáctanos</span>
-                <h1>Hablemos de <span class="highlight">transformación</span></h1>
-                <p>¿Quieres ser aliado, donar o conocer más? Escríbenos y te responderemos pronto.</p>
-            </div>
+<BaseLayout title="Contacto" description="Comunícate con Fundación AMCA. Estamos aquí para transformar vidas y construir alianzas.">
+    <section class="container" style="padding: 60px 0;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="color: var(--primary);">Hablemos de <span class="highlight">Transformación</span></h1>
+            <p style="font-size: 1.2rem; color: #555;">¿Tienes una propuesta, quieres ser aliado o necesitas información de nuestros programas? Escríbenos.</p>
+        </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1000px; margin: 0 auto;">
-                <!-- Datos de contacto -->
-                <div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 24px;">📬 Información de contacto</h3>
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <div style="display: flex; align-items: center; gap: 16px; padding: 16px; background: white; border-radius: var(--radius); box-shadow: var(--shadow);">
-                            <div style="font-size: 2rem;">📍</div>
-                            <div>
-                                <div style="font-weight: 600;">Dirección</div>
-                                <div style="color: var(--color-text-light);">Bogotá D.C., Colombia</div>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 16px; padding: 16px; background: white; border-radius: var(--radius); box-shadow: var(--shadow);">
-                            <div style="font-size: 2rem;">📧</div>
-                            <div>
-                                <div style="font-weight: 600;">Correo electrónico</div>
-                                <div style="color: var(--color-text-light);"><a href="mailto:contacto@fundacionamca.org" style="color: var(--color-primary);">contacto@fundacionamca.org</a></div>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 16px; padding: 16px; background: white; border-radius: var(--radius); box-shadow: var(--shadow);">
-                            <div style="font-size: 2rem;">📱</div>
-                            <div>
-                                <div style="font-weight: 600;">Teléfono</div>
-                                <div style="color: var(--color-text-light);">+57 3XX XXX XXXX</div>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 16px; padding: 16px; background: white; border-radius: var(--radius); box-shadow: var(--shadow);">
-                            <div style="font-size: 2rem;">🕐</div>
-                            <div>
-                                <div style="font-weight: 600;">Horario de atención</div>
-                                <div style="color: var(--color-text-light);">Lunes a viernes · 8:00 AM - 6:00 PM</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 30px; background: var(--color-primary); color: white; border-radius: var(--radius); padding: 24px; text-align: center;">
-                        <p style="font-size: 0.9rem; opacity: 0.8;">✅ Todas las donaciones son deducibles de impuestos en Colombia</p>
-                        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 8px;">Calificada en Régimen Tributario Especial - DIAN</p>
-                    </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+            
+            <!-- Formulario (Usando Formspree es lo más fácil) -->
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" style="background: #f4f7f6; padding: 40px; border-radius: 20px;">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre Completo</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
                 </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Mensaje</label>
+                    <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Enviar Mensaje</button>
+            </form>
 
-                <!-- Formulario (placeholder) -->
-                <div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 24px;">✉️ Escríbenos</h3>
-                    <form style="display: flex; flex-direction: column; gap: 16px; background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow);">
-                        <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: 6px;">Nombre completo</label>
-                            <input type="text" placeholder="Tu nombre" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;" required />
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: 6px;">Correo electrónico</label>
-                            <input type="email" placeholder="tu@email.com" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;" required />
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: 6px;">Asunto</label>
-                            <select style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;">
-                                <option>Quiero ser aliado empresarial</option>
-                                <option>Quiero donar</option>
-                                <option>Quiero ser voluntario</option>
-                                <option>Información de programas</option>
-                                <option>Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: 6px;">Mensaje</label>
-                            <textarea rows="4" placeholder="Cuéntanos cómo podemos ayudarte..." style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
-                        </div>
-                        <button type="submit" style="background: var(--color-primary); color: white; font-weight: 700; padding: 14px; border: none; border-radius: 8px; font-size: 1.05rem; cursor: pointer;">Enviar mensaje</button>
-                        <p style="text-align: center; font-size: 0.85rem; color: var(--color-text-light);">📌 Próximamente: integración con WhatsApp y formulario automático</p>
-                    </form>
+            <!-- Info de contacto -->
+            <div>
+                <h2 style="color: var(--primary);">Información de la Fundación</h2>
+                <p><strong>Email:</strong> contacto@amca.org</p>
+                <p><strong>Ubicación:</strong> Colombia</p>
+                <div style="margin-top: 30px; padding: 20px; background: var(--primary); color: white; border-radius: 10px;">
+                    <p style="font-style: italic;">"La innovación social requiere de voces que se unan. Tu mensaje es el primer paso para una nueva alianza."</p>
                 </div>
             </div>
         </div>
