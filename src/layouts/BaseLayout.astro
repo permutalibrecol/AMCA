@@ -1,47 +1,20 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-
-interface Props {
-  title: string;
-  description: string;
-  canonicalURL?: string; // Para SEO avanzado
-}
-
-const { title, description, canonicalURL = import.meta.env.BASE_URL } = Astro.props;
+const { title, description } = Astro.props;
 ---
-
-<!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    
-    <!-- SEO Básico y Avanzado -->
-    <title>{title} | Fundación AMCA - Innovación Social</title>
+<head>
+    <meta charset="utf-8" />
+    <title>{title} | Fundación AMCA</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(canonicalURL, Astro.site)} />
-
-    <!-- Open Graph (para compartir en redes sociales de forma profesional) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.site} />
-    <meta property="og:title" content={`${title} | Fundación AMCA`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('./images/logo-fundacion.jpg', Astro.site)} />
-
-    <!-- Fuentes y estilos globales -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <Header />
-    <main>
-      <slot /> <!-- Aquí se insertará el contenido de cada página -->
-    </main>
-    <Footer />
-  </body>
+</head>
+<body>
+    <header style="padding: 20px; text-align: center;">
+        <img src="/images/logo-amca.jpg" alt="Logo AMCA" style="max-width: 200px;">
+    </header>
+    <slot />
+    <footer style="text-align: center; padding: 40px; background: var(--primary); color: white;">
+        <p>Juntos construimos independencia y un futuro mejor.</p>
+    </footer>
+</body>
 </html>
