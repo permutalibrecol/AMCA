@@ -1,88 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout title="Nuestros Programas" description="Conoce los 5 ejes de transformación de Fundación AMCA: desde bioeconomía hasta educación tecnológica e IA.">
-    
-    <!-- Header de la sección -->
-    <section class="container" style="padding: 60px 0;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <span style="color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Nuestros Pilares</span>
-            <h1 style="color: var(--primary); font-size: 3rem; margin-top: 10px;">Ejes de <span class="highlight">Transformación</span></h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto; color: #555;">
-                En Fundación AMCA, articulamos tecnología, bioeconomía y logística para generar un impacto real y sostenible en el territorio.
-            </p>
-        </div>
-
-        <!-- Grid de Programas -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-            
-            <!-- TR1: Agro-Modernización -->
-            <div class="program-card">
-                <div class="icon">🌱</div>
+<BaseLayout title="Programas">
+    <section class="container" style="padding: 40px 0;">
+        <h1>Nuestros Programas</h1>
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="border: 1px solid #ddd; padding: 20px;">
                 <h3>TR1 - Agro-Modernización</h3>
-                <p>Industrializamos materias primas agrícolas para insertar a pequeños productores en mercados internacionales.</p>
-                <small><strong>Impacto:</strong> Empleo digno y eliminación de intermediarios.</small>
+                <p>Industrialización para pequeños productores.</p>
             </div>
-
-            <!-- TR2: Bioeconomía Circular -->
-            <div class="program-card">
-                <div class="icon">♻️</div>
-                <h3>TR2 - Bioeconomía Circular</h3>
-                <p>Transformamos residuos agrícolas en productos de alto valor agregado (bioplásticos, insumos farmacéuticos).</p>
-                <small><strong>Impacto:</strong> Reducción de residuos y nuevas fuentes de ingreso.</small>
-            </div>
-
-            <!-- HUB: Educación -->
-            <div class="program-card">
-                <div class="icon">💻</div>
-                <h3>HUB Global - Educación</h3>
-                <p>Formación intensiva en inglés y herramientas de Inteligencia Artificial para la empleabilidad remota.</p>
-                <small><strong>Impacto:</strong> Cierre de brecha digital y talento contratable.</small>
-            </div>
-
-            <!-- LOG: Acceso -->
-            <div class="program-card">
-                <div class="icon">🚚</div>
-                <h3>LOG - Acceso y Permanencia</h3>
-                <p>Eliminamos barreras logísticas (transporte, alimentación, cuidado) para garantizar que nadie se quede atrás.</p>
-                <small><strong>Impacto:</strong> Participación inclusiva y dignificación.</small>
-            </div>
-
-            <!-- ALZ: Gestión -->
-            <div class="program-card">
-                <div class="icon">⚖️</div>
-                <h3>ALZ - Gestión Multilateral</h3>
-                <p>Captación de recursos y alianzas estratégicas con organismos globales para blindar financieramente el impacto.</p>
-                <small><strong>Impacto:</strong> Sostenibilidad y transparencia auditada.</small>
+            <div style="border: 1px solid #ddd; padding: 20px;">
+                <h3>TR2 - Bioeconomía</h3>
+                <p>Valorización de residuos.</p>
             </div>
         </div>
     </section>
-
-    <!-- Ejes Transversales -->
-    <section style="background: #f4f7f6; padding: 60px 0;">
-        <div class="container">
-            <h2 style="text-align: center; color: var(--primary); margin-bottom: 40px;">ADN Transversal</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                {['Inteligencia Artificial', 'Enfoque de Género', 'Intergeneracional', 'Sostenibilidad', 'Reparación a Víctimas'].map(eje => (
-                    <span style="background: white; padding: 15px 25px; border-radius: 50px; border: 1px solid var(--secondary); font-weight: 600; color: var(--primary);">
-                        {eje}
-                    </span>
-                ))}
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .program-card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border-top: 5px solid var(--secondary);
-        }
-        .program-card:hover { transform: translateY(-10px); }
-        .icon { font-size: 2.5rem; margin-bottom: 15px; }
-    </style>
 </BaseLayout>
