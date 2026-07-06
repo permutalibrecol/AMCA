@@ -1,42 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout title="Contacto" description="Comunícate con Fundación AMCA. Estamos aquí para transformar vidas y construir alianzas.">
-    <section class="container" style="padding: 60px 0;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h1 style="color: var(--primary);">Hablemos de <span class="highlight">Transformación</span></h1>
-            <p style="font-size: 1.2rem; color: #555;">¿Tienes una propuesta, quieres ser aliado o necesitas información de nuestros programas? Escríbenos.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
-            
-            <!-- Formulario conectado a Formspree -->
-            <form action="https://formspree.io/f/meebdewe" method="POST" style="background: #f4f7f6; padding: 40px; border-radius: 20px;">
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre Completo</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Mensaje</label>
-                    <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; padding: 12px; border: none; border-radius: 8px; background: #007c70; color: white; font-weight: bold;">Enviar Mensaje</button>
-            </form>
-
-            <!-- Info de contacto -->
-            <div>
-                <h2 style="color: var(--primary);">Información de la Fundación</h2>
-                <p><strong>Email:</strong> contacto@amca.org</p>
-                <p><strong>Ubicación:</strong> Colombia</p>
-                <div style="margin-top: 30px; padding: 20px; background: var(--primary); color: white; border-radius: 10px;">
-                    <p style="font-style: italic;">"La innovación social requiere de voces que se unan. Tu mensaje es el primer paso para una nueva alianza."</p>
-                </div>
-            </div>
-        </div>
+<BaseLayout title="Contacto">
+    <section class="container" style="padding: 40px 0;">
+        <h1>Contacto</h1>
+        <form action="https://formspree.io/f/meebdewe" method="POST">
+            <input type="text" name="name" placeholder="Tu nombre" required style="width:100%; margin-bottom:10px;">
+            <input type="email" name="email" placeholder="Tu email" required style="width:100%; margin-bottom:10px;">
+            <textarea name="message" placeholder="Mensaje" style="width:100%; margin-bottom:10px;"></textarea>
+            <button type="submit" class="btn" style="background:#1e3a5f; color:white;">Enviar</button>
+        </form>
     </section>
 </BaseLayout>
