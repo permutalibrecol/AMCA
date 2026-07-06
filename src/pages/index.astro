@@ -2,8 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Inicio" description="Fundación AMCA: transformación social mediante bioeconomía industrial, educación tecnológica y agentes de IA. 90% de los fondos van directo al territorio.">
-    <!-- HERO -->
+<BaseLayout title="Inicio" description="Fundación AMCA: transformación social con bioeconomía e IA.">
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -11,8 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h1>Revolucionando el <span class="highlight">Impacto Social</span> con Tecnología</h1>
                 <p>Fundación AMCA transforma vidas mediante bioeconomía industrial, educación tecnológica y agentes de Inteligencia Artificial. <strong>Instalamos capacidades productivas</strong> en los territorios.</p>
                 <div class="hero-buttons">
-                    <a href="/donaciones" class="btn btn-primary">🤝 Donar Ahora</a>
-                    <a href="/programas" class="btn btn-secondary">Conocer Programas →</a>
+                    <a href="./donaciones" class="btn btn-primary">🤝 Donar Ahora</a>
+                    <a href="./programas" class="btn btn-secondary">Conocer Programas →</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
@@ -30,16 +29,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
             </div>
             <div class="hero-image">
-                <img src="/images/hero-banner.jpg" alt="Fundación AMCA transformando comunidades" />
+                <img src="./images/hero-banner.jpg" alt="Fundación AMCA transformando comunidades" />
                 <div class="hero-image-badge">
-                    <img src="/images/icon-ia.png" alt="IA" class="badge-icon" />
+                    <img src="./images/icon-ia.png" alt="IA" class="badge-icon" />
                     <span>Gobernanza con IA</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- QUIÉNES SOMOS -->
     <section class="section who-we-are">
         <div class="container">
             <div class="section-header">
@@ -67,138 +65,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <div class="feature-icon">⚖️</div>
                     <h3>Incentivos Fiscales</h3>
                     <p>Empresas aliadas acceden a deducciones de hasta el 200% en impuestos mientras generan impacto social real.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGRAMAS -->
-    <section class="section programs-preview bg-light">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nuestros Programas</span>
-                <h2>Ejes de <span class="highlight">transformación</span></h2>
-            </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <img src="/images/programa-tr1.jpg" alt="TR1 - Agro-Modernización" class="program-img" />
-                    <div class="program-content">
-                        <span class="program-tag">TR1</span>
-                        <h3>Agro-Modernización</h3>
-                        <p>Industrialización de materias primas agrícolas para mercados internacionales. Plantas de extracción y deshidratación en territorio.</p>
-                        <a href="/programas" class="program-link">Conocer más →</a>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <img src="/images/programa-tr2.jpg" alt="TR2 - Bioeconomía Circular" class="program-img" />
-                    <div class="program-content">
-                        <span class="program-tag">TR2</span>
-                        <h3>Bioeconomía Circular</h3>
-                        <p>Valorización de subproductos agrícolas en empaques biodegradables, bioplásticos y aditivos para cosmética y farmacia.</p>
-                        <a href="/programas" class="program-link">Conocer más →</a>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <img src="/images/programa-hub.jpg" alt="Hub Global - Educación" class="program-img" />
-                    <div class="program-content">
-                        <span class="program-tag">Hub Global</span>
-                        <h3>Educación Tecnológica</h3>
-                        <p>Clases en vivo de inglés y herramientas de IA para comunidades vulnerables. Talento bilingüe certificado para empresas.</p>
-                        <a href="/programas" class="program-link">Conocer más →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INCENTIVOS FISCALES -->
-    <section class="section tax-incentives">
-        <div class="container">
-            <div class="tax-grid">
-                <div class="tax-text">
-                    <span class="section-tag">Para Empresas</span>
-                    <h2>Beneficios <span class="highlight">fiscales</span> y sociales</h2>
-                    <p>Aliarse con Fundación AMCA genera impacto real y optimiza tu carga tributaria.</p>
-                    <ul class="tax-list">
-                        <li>
-                            <strong>200%</strong> de deducción en renta
-                            <span class="tax-ley">(Ley 1257/2008 · Mujeres víctimas)</span>
-                        </li>
-                        <li>
-                            <strong>120%</strong> de deducción en renta
-                            <span class="tax-ley">(Ley 2040/2020 · Adultos mayores)</span>
-                        </li>
-                        <li>
-                            <strong>25%</strong> descuento tributario directo
-                            <span class="tax-ley">(Art. 257 Estatuto Tributario)</span>
-                        </li>
-                    </ul>
-                    <a href="/contacto" class="btn btn-primary">Quiero ser aliado</a>
-                </div>
-                <div class="tax-image">
-                    <img src="/images/icon-donacion.png" alt="Incentivos fiscales" />
-                    <div class="tax-badge">✅ Beneficios comprobables</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRANSPARENCIA -->
-    <section class="section transparency bg-dark">
-        <div class="container">
-            <div class="transparency-content">
-                <span class="section-tag light">Transparencia</span>
-                <h2>Tu donación <span class="highlight">en tiempo real</span></h2>
-                <p>Cada transacción es auditada por nuestros Agentes de IA y disponible en nuestro dashboard público.</p>
-                <div class="transparency-metrics">
-                    <div class="metric">
-                        <span class="metric-number" id="metricTerritorio">90%</span>
-                        <span class="metric-label">al territorio</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number" id="metricTransacciones">1,247</span>
-                        <span class="metric-label">transacciones auditadas</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number" id="metricBeneficiarios">3,892</span>
-                        <span class="metric-label">beneficiarios directos</span>
-                    </div>
-                </div>
-                <a href="/transparencia" class="btn btn-secondary">Ver dashboard completo →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIO -->
-    <section class="section testimonial">
-        <div class="container">
-            <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="/images/astrid-milena.jpg" alt="Astrid Milena Rondón" />
-                </div>
-                <div class="testimonial-text">
-                    <span class="section-tag">Fundadora</span>
-                    <blockquote>
-                        "Diseñamos una fundación donde la tecnología sirve a las personas, no al revés. Cada peso que recibimos va directo a transformar territorios, sin burocracia ni intermediarios."
-                    </blockquote>
-                    <cite>
-                        <strong>Astrid Milena Rondón</strong>
-                        <span>Fundadora y Directora Ejecutiva</span>
-                    </cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class="section cta-final">
-        <div class="container">
-            <div class="cta-box">
-                <h2>¿Listo para <span class="highlight">transformar</span> vidas?</h2>
-                <p>Únete a la nueva era del impacto social transparente e industrializado.</p>
-                <div class="cta-buttons">
-                    <a href="/donaciones" class="btn btn-primary btn-large">🤝 Donar ahora</a>
-                    <a href="/contacto" class="btn btn-secondary btn-large">📩 Ser aliado</a>
                 </div>
             </div>
         </div>
