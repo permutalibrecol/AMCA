@@ -1,1 +1,11 @@
-cieeis
+<section class="container" style="padding: 60px 0;">
+    <h2 style="text-align: center; color: var(--primary);">Nuestros Pilares</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        {[{title: "Agentes de IA", icon: "🤖"}, {title: "Bioeconomía", icon: "🌱"}, {title: "Educación", icon: "📚"}].map(f => (
+            <div style="padding: 30px; border: 1px solid #ddd; border-radius: 10px; text-align: center;">
+                <div style="font-size: 3rem;">{f.icon}</div>
+                <h3>{f.title}</h3>
+            </div>
+        ))}
+    </div>
+</section>
