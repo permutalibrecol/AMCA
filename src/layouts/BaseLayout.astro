@@ -1,119 +1,47 @@
 ---
-const { title, description } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string; // Para SEO avanzado
+}
+
+const { title, description, canonicalURL = import.meta.env.BASE_URL } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} · Fundación AMCA</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Básico y Avanzado -->
+    <title>{title} | Fundación AMCA - Innovación Social</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content={`${title} · Fundación AMCA`} />
-    <meta property="og:description" content={description} />
+    <link rel="canonical" href={new URL(canonicalURL, Astro.site)} />
+
+    <!-- Open Graph (para compartir en redes sociales de forma profesional) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://permutalibrecol.github.io/AMCA/" />
-    <meta property="og:image" content="https://permutalibrecol.github.io/AMCA/images/og-image.jpg" />
-    <meta property="og:site_name" content="Fundación AMCA" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/AMCA/favicon.ico" type="image/x-icon" />
-    
-    <!-- ⚡ ESTILOS (RUTA ABSOLUTA) ⚡ -->
-    <link rel="stylesheet" href="/AMCA/styles/global.css" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
-</head>
-<body>
-    <header class="header">
-        <div class="container header-inner">
-            <a href="/AMCA/" class="logo">
-                <img src="/AMCA/images/logo-amca.png" alt="Fundación AMCA" class="logo-img" />
-                <span class="logo-text">Fundación <strong>AMCA</strong></span>
-            </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="/AMCA/" class={Astro.url.pathname === '/AMCA/' ? 'active' : ''}>Inicio</a></li>
-                    <li><a href="/AMCA/programas" class={Astro.url.pathname === '/AMCA/programas' ? 'active' : ''}>Programas</a></li>
-                    <li><a href="/AMCA/transparencia" class={Astro.url.pathname === '/AMCA/transparencia' ? 'active' : ''}>Transparencia</a></li>
-                    <li><a href="/AMCA/donaciones" class="btn-donar-nav">Donar</a></li>
-                    <li><a href="/AMCA/contacto" class={Astro.url.pathname === '/AMCA/contacto' ? 'active' : ''}>Contacto</a></li>
-                </ul>
-            </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
-        </div>
-    </header>
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:title" content={`${title} | Fundación AMCA`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('./images/logo-fundacion.jpg', Astro.site)} />
 
+    <!-- Fuentes y estilos globales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <Header />
     <main>
-        <slot />
+      <slot /> <!-- Aquí se insertará el contenido de cada página -->
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="/AMCA/images/logo-amca-white.png" alt="Fundación AMCA" class="footer-logo" />
-                    <p>Agro-Modernización y Comunidades Autónomas</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="YouTube">▶️</a>
-                        <a href="#" aria-label="LinkedIn">🔗</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">👍</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="/AMCA/">Inicio</a></li>
-                        <li><a href="/AMCA/programas">Programas</a></li>
-                        <li><a href="/AMCA/transparencia">Transparencia</a></li>
-                        <li><a href="/AMCA/donaciones">Donaciones</a></li>
-                        <li><a href="/AMCA/contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contáctanos</h4>
-                    <p>📍 Bogotá D.C., Colombia</p>
-                    <p>📧 <a href="mailto:contacto@fundacionamca.org">contacto@fundacionamca.org</a></p>
-                    <p>📱 +57 3XX XXX XXXX</p>
-                </div>
-                <div class="footer-legal">
-                    <h4>Legales</h4>
-                    <ul>
-                        <li><a href="#">Política de privacidad</a></li>
-                        <li><a href="#">Términos de uso</a></li>
-                        <li><a href="#">Código de ética</a></li>
-                    </ul>
-                    <p class="footer-rte">✅ Calificada en Régimen Tributario Especial - DIAN</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Fundación AMCA · Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const nav = document.querySelector('.nav');
-            if (menuToggle && nav) {
-                menuToggle.addEventListener('click', function() {
-                    nav.classList.toggle('active');
-                });
-                nav.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        nav.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
-</body>
+    <Footer />
+  </body>
 </html>
