@@ -2,75 +2,46 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Donaciones" description="Apoya la transformación social con tu donación. Beneficios fiscales para empresas y personas en Colombia.">
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Apóyanos</span>
-                <h1>Tu donación <span class="highlight">transforma vidas</span></h1>
-                <p>Con tu aporte, llevamos bioeconomía, educación y tecnología a las comunidades que más lo necesitan.</p>
-            </div>
+<BaseLayout 
+    title="Únete al Cambio | Dona a Fundación AMCA" 
+    description="Tu contribución llega directamente al territorio. Sé parte de la bioeconomía industrial y la transformación social con tecnología."
+>
+    <section class="container" style="padding: 60px 0; text-align: center;">
+        <h1 style="color: var(--primary); font-size: 3rem; margin-bottom: 20px;">Tu impacto empieza aquí</h1>
+        <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px; color: #555;">
+            El 90% de tu donación se convierte directamente en <strong>capacidades productivas</strong> para comunidades que construyen un futuro mejor.
+        </p>
 
-            <!-- Tarjetas de donación -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 60px;">
-                <div style="background: white; border-radius: var(--radius); padding: 30px; text-align: center; box-shadow: var(--shadow);">
-                    <div style="font-size: 3rem; margin-bottom: 12px;">🌱</div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Donación única</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Haz un aporte puntual para un proyecto específico.</p>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--color-primary); margin: 16px 0;">Desde $10.000</div>
-                    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Donar ahora</a>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; text-align: left;">
+            
+            <!-- Panel de Donación -->
+            <div style="background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h2 style="color: var(--primary);">Elige tu forma de ayudar</h2>
+                <div style="margin-top: 20px;">
+                    <button class="btn btn-primary" style="width: 100%; margin-bottom: 15px; font-size: 1.1rem; padding: 15px;">Dona con Transferencia</button>
+                    <button class="btn btn-secondary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Donar Vía PayPal/Stripe</button>
                 </div>
-                <div style="background: white; border-radius: var(--radius); padding: 30px; text-align: center; box-shadow: var(--shadow); border: 2px solid var(--color-secondary);">
-                    <div style="font-size: 3rem; margin-bottom: 12px;">🤝</div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Donación recurrente</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Apoya mes a mes nuestra operación sostenible.</p>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--color-primary); margin: 16px 0;">Desde $20.000/mes</div>
-                    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Suscribirme</a>
-                </div>
-                <div style="background: white; border-radius: var(--radius); padding: 30px; text-align: center; box-shadow: var(--shadow);">
-                    <div style="font-size: 3rem; margin-bottom: 12px;">🏢</div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Aliado empresarial</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Accede a beneficios fiscales mientras generas impacto.</p>
-                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin: 16px 0;">Deducción del 200%</div>
-                    <a href="/contacto" class="btn btn-secondary" style="width: 100%; justify-content: center;">Quiero ser aliado</a>
-                </div>
-            </div>
-
-            <!-- Incentivos fiscales -->
-            <div style="background: #f1f5f9; border-radius: var(--radius); padding: 40px; margin-bottom: 40px;">
-                <h2 style="text-align: center; margin-bottom: 20px;">Beneficios fiscales <span class="highlight">para empresas</span></h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
-                    <div style="background: white; border-radius: var(--radius); padding: 20px; text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 900; color: var(--color-primary);">200%</div>
-                        <div style="font-weight: 600;">Deducción en renta</div>
-                        <div style="font-size: 0.85rem; color: var(--color-text-light);">Ley 1257/2008 · Mujeres víctimas</div>
-                    </div>
-                    <div style="background: white; border-radius: var(--radius); padding: 20px; text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 900; color: var(--color-primary);">120%</div>
-                        <div style="font-weight: 600;">Deducción en renta</div>
-                        <div style="font-size: 0.85rem; color: var(--color-text-light);">Ley 2040/2020 · Adultos mayores</div>
-                    </div>
-                    <div style="background: white; border-radius: var(--radius); padding: 20px; text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 900; color: var(--color-primary);">25%</div>
-                        <div style="font-weight: 600;">Descuento tributario</div>
-                        <div style="font-size: 0.85rem; color: var(--color-text-light);">Art. 257 Estatuto Tributario</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Medios de pago -->
-            <div style="text-align: center;">
-                <h3 style="margin-bottom: 16px;">💳 Medios de pago disponibles</h3>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 2rem;">
-                    <span>💳</span>
-                    <span>📱</span>
-                    <span>🏦</span>
-                    <span>🟢</span>
-                </div>
-                <p style="color: var(--color-text-light); margin-top: 16px;">
-                    Próximamente: Nequi, Daviplata, PayPal, transferencia bancaria.
+                <p style="font-size: 0.9rem; margin-top: 20px; color: #777; text-align: center;">
+                    🔒 Procesos seguros y auditados por IA.
                 </p>
             </div>
+
+            <!-- Panel de Impacto -->
+            <div style="background: var(--primary); color: white; padding: 40px; border-radius: 20px;">
+                <h2 style="color: var(--accent);">¿A dónde va tu dinero?</h2>
+                <p>Cada peso está destinado a:</p>
+                <ul style="line-height: 2;">
+                    <li>🌱 <strong>Bioeconomía:</strong> Semillas y tecnología de procesamiento.</li>
+                    <li>🤖 <strong>IA & Educación:</strong> Formación en tecnología para jóvenes.</li>
+                    <li>🏗️ <strong>Infraestructura:</strong> Herramientas locales de producción.</li>
+                </ul>
+            </div>
         </div>
+    </section>
+
+    <!-- Banner de Confianza -->
+    <section style="background: #f4f7f6; padding: 40px 20px; text-align: center; margin-top: 40px;">
+        <h3 style="color: var(--primary);">¿Eres empresa?</h3>
+        <p>Accede a deducciones fiscales de hasta el 200%. <a href="/contacto" style="color: var(--secondary); font-weight: bold;">Contáctanos aquí para certificados.</a></p>
     </section>
 </BaseLayout>
